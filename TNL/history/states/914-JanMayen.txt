@@ -7,18 +7,18 @@ state = { # Jan Mayen
 		owner = CML	
 		add_core_of = CML
 		buildings = {
-			13272 = {
+			13273 = {
 				naval_base = 6
 			}
 		}
 		victory_points = {
-			13272 20 
+			13273 20 
 		}
 	}
 
 
 	provinces = {
-		13272
+		13272 13273 13274
 	}
 	
 	local_supplies=0.000
