@@ -1,0 +1,144 @@
+focus_tree = {
+	id = santa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CML
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = CML_naughty_list
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 7
+		y = 0
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		#prerequisite = { }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		country_event = santa.1
+		}
+	}
+	focus = {
+		id = CML_compromise_with_the_elves
+		icon = GFX_goal_generic_major_alliance
+		x = 0
+		y = 1
+		relative_position_id = CML_naughty_list
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_naughty_list }
+		mutually_exclusive = { focus = CML_elf_union focus = CML_frosty_influence }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_elf_union
+		icon = GFX_goal_generic_war_with_comintern
+		x = -2
+		y = 1
+		relative_position_id = CML_naughty_list
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_naughty_list }
+		mutually_exclusive = { focus = CML_compromise_with_the_elves focus = CML_frosty_influence }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_frosty_influence
+		icon = GFX_goal_generic_political_pressure
+		x = 2
+		y = 1
+		relative_position_id = CML_naughty_list
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_naughty_list }
+		mutually_exclusive = { focus = CML_elf_union focus = CML_compromise_with_the_elves }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	
+	
+
+}	
