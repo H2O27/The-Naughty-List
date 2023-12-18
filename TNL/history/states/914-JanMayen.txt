@@ -1,12 +1,15 @@
 state = { # Jan Mayen
 	id = 914
 	name = "Jan Mayen"
-	manpower = 10
+	manpower = 923750
 	state_category = metropolis
 	history = {
 		owner = CML	
 		add_core_of = CML
 		buildings = {
+		infrastructure = 3
+		arms_factory = 3
+		industrial_complex = 6
 			13273 = {
 				naval_base = 6
 			}

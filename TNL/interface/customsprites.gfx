@@ -1,0 +1,7 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_portrait_cml_santa_claus"
+		texturefile = "gfx/leaders/CML/portrait_santa_claus.dds"
+	}
+}

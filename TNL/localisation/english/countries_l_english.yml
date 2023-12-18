@@ -1,4 +1,7 @@
 ﻿l_english:
+ CML_democratic:0 "North Pole"
+ CML_democratic_DEF:0 "the North Pole"
+ CML_democratic_ADJ:0 "Northern"
  GER_fascism:0 "German Reich"
  GER_fascism_DEF:0 "the German Reich"
  GER_democratic:0 "German Republic"

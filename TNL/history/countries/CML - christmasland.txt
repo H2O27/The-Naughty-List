@@ -1,8 +1,8 @@
-﻿capital = 826 #Sukhumi
+﻿capital = 914
 
-#oob = "ABK_1936"
+oob = "CML_1936"
 
-set_research_slots = 3
+set_research_slots = 4
 
 # Starting tech
 set_technology = {
@@ -98,7 +98,13 @@ set_popularities = {
 	neutrality = 0
 }
 
-
-recruit_character = ABK_kirilli_bechvaya
+create_country_leader = {
+	name = "Nicholas Claus"
+	desc = "POLITICS_SANTA_DESC"
+	picture = "portrait_santa_claus.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+	traits = { }
+}
 
 
