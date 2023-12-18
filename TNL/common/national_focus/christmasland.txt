@@ -45,7 +45,7 @@ focus_tree = {
 	focus = {
 		id = CML_compromise_with_the_elves
 		icon = GFX_goal_generic_major_alliance
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = CML_naughty_list
 		cost = 10
@@ -63,7 +63,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = CML_naughty_list }
-		mutually_exclusive = { focus = CML_elf_union focus = CML_frosty_influence }
+		mutually_exclusive = { focus = CML_frosty_influence }
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -71,45 +71,20 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICS }
 
 		completion_reward = {
-		
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.1
 		}
-	}
-	focus = {
-		id = CML_elf_union
-		icon = GFX_goal_generic_war_with_comintern
-		x = -2
-		y = 1
-		relative_position_id = CML_naughty_list
-		cost = 10
-
-		ai_will_do = {
-			factor = 24
+		add_popularity = {
+		ideology = communism
+		popularity = 0.05
 		}
-
-		available = {
-		
-		}
-		
-		bypass = {
-
-		}
-		
-		prerequisite = { focus = CML_naughty_list }
-		mutually_exclusive = { focus = CML_compromise_with_the_elves focus = CML_frosty_influence }
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICS }
-
-		completion_reward = {
-		
 		}
 	}
 	focus = {
 		id = CML_frosty_influence
 		icon = GFX_goal_generic_political_pressure
-		x = 2
+		x = 1
 		y = 1
 		relative_position_id = CML_naughty_list
 		cost = 10
@@ -127,7 +102,7 @@ focus_tree = {
 		}
 		
 		prerequisite = { focus = CML_naughty_list }
-		mutually_exclusive = { focus = CML_elf_union focus = CML_compromise_with_the_elves }
+		mutually_exclusive = { focus = CML_compromise_with_the_elves }
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -135,7 +110,199 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICS }
 
 		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+		popularity = 0.1
+		}
+		}
+	}
+	focus = {
+		id = CML_higher_pay
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = -1
+		y = 1
+		relative_position_id = CML_compromise_with_the_elves
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
 		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_compromise_with_the_elves }
+		#mutually_exclusive = { focus = CML_compromise_with_the_elves }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = CML_present_policy
+		icon = GFX_focus_SOV_merge_plants
+		x = 1
+		y = 1
+		relative_position_id = CML_compromise_with_the_elves
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_compromise_with_the_elves focus = CML_frosty_influence }
+		#mutually_exclusive = { focus = CML_compromise_with_the_elves }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		country_event = santa.2
+		}
+	}
+	focus = {
+		id = CML_favor_neighbors
+		icon = GFX_focus_SOV_merge_plants
+		x = 1
+		y = 1
+		relative_position_id = CML_present_policy
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_present_policy }
+		mutually_exclusive = { focus = CML_equal_distribution }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CML_equal_distribution
+		icon = GFX_focus_SOV_merge_plants
+		x = -1
+		y = 1
+		relative_position_id = CML_present_policy
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_present_policy }
+		mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CML_crush_the_union
+		icon = GFX_focus_ger_bulwark_against_bolshevism
+		x = 1
+		y = 1
+		relative_position_id = CML_frosty_influence
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_frosty_influence }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = CML_moving_forward
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CML_equal_distribution
+		cost = 10
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_equal_distribution focus = CML_favor_neighbors }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		add_political_power = 50
 		}
 	}
 	

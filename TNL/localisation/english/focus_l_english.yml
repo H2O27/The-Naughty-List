@@ -4,8 +4,14 @@
  
  CML_naughty_list:0 "Evaluate Christmas 1935"
  CML_compromise_with_the_elves:0 "Compromise With The Elves"
- CML_elf_union:0 "Lurk In The Shadows"
- CML_frosty_influence:0 "Know Your Place"
+ CML_frosty_influence:0 "Frosty's Proposal"
+ CML_higher_pay:0 "Promise Higher Pay"
+ CML_present_policy:0 "The Present Policy"
+ CML_moving_forward:0 "Moving Forward"
+ CML_crush_the_union:0 "Crush The Union"
+ CML_equal_distribution:0 "Equal Distribution"
+ CML_favor_neighbors:0 "Prioritize Neighboring Areas"
+
  
  generic_focus:0 "National Focus"
  army_effort:0 "Army Effort"

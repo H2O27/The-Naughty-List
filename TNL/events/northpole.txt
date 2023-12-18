@@ -20,6 +20,24 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = santa.2
+	title = "The Present Policy"
+	desc = santa.2.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Favour Nearby Nations"
+		complete_national_focus = CML_favor_neighbors
+	}
+	option = {
+		name = "Everyone Deserves A Good Christmas"
+		complete_national_focus = CML_equal_distribution
+	}
+}
+
 
 
 
