@@ -1,8 +1,8 @@
 state = { # Jan Mayen
 	id = 914
-	name = "STATE_914"
+	name = "Jan Mayen"
 	manpower = 10
-	state_category = tiny_island
+	state_category = metropolis
 	history = {
 		owner = CML	
 		add_core_of = CML
@@ -10,7 +10,10 @@ state = { # Jan Mayen
 			13272 = {
 				naval_base = 6
 			}
-		}	
+		}
+		victory_points = {
+			13272 20 
+		}
 	}
 
 
