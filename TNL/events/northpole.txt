@@ -29,12 +29,57 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Favour Nearby Nations"
+		name = "Start With Nearby Nations and Spread Out"
 		complete_national_focus = CML_favor_neighbors
+		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
-		name = "Everyone Deserves A Good Christmas"
+		name = "Santa Does Not Pick Favorites"
 		complete_national_focus = CML_equal_distribution
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = santa.3
+	title = "State of the North Pole"
+	desc = santa.3.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Business as Usual in Santa's Workshop"
+		#complete_national_focus = CML_favor_neighbors
+	}
+}
+
+country_event = {
+	id = santa.4
+	title = "Crisis in the North Pole"
+	desc = santa.4.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Will There be a Christmas This Year...?"
+		complete_national_focus = CML_elf_revolt
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = santa.5
+	title = "Santa Claus Assassination"
+	desc = santa.5.d
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Only the Beginning of the Chaos"
+		#complete_national_focus = CML_favor_neighbors
 	}
 }
 
