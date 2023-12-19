@@ -11,6 +11,8 @@ focus_tree = {
 	}
 	
 	default = no
+	
+	continuous_focus_position = { x = 50 y = 3000 }
 
 	focus = {
 		id = CML_naughty_list
@@ -302,10 +304,513 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICS }
 
 		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = "RSanta will address the elves outside of his workshop.!"
+			hidden_effect = {
+				if = {
+					limit = {
+						has_completed_focus = CML_compromise_with_the_elves
+						has_completed_focus = CML_equal_distribution
+					}
+					country_event = santa.4
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = CML_frosty_influence
+						has_completed_focus = CML_favor_neighbors
+					}
+					country_event = santa.5
+				}
+				else = {
+					country_event = santa.3
+				}
+			}
+		}
+	}
+	focus = {
+		id = CML_elf_revolt
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = CML_moving_forward
+		cost = 10
+
+		allow_branch = {
+			has_completed_focus = CML_elf_revolt
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
 		add_political_power = 50
 		}
 	}
-	
-	
+	focus = {
+		id = CML_draft_const
+		icon = GFX_goal_generic_propaganda
+		x = -2
+		y = 1
+		relative_position_id = CML_elf_revolt
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_elf_revolt }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_join_struggle
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CML_elf_revolt
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_elf_revolt }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_KGB
+		icon = GFX_goal_generic_propaganda
+		x = 2
+		y = 1
+		relative_position_id = CML_elf_revolt
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_elf_revolt }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_infiltrate_SOV
+		icon = GFX_goal_generic_propaganda
+		x = -3
+		y = 1
+		relative_position_id = CML_KGB
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_draft_const }
+		prerequisite = { focus = CML_join_struggle }
+		prerequisite = { focus = CML_KGB }
+		mutually_exclusive = { focus = CML_united_SOV }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_bloodless
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CML_infiltrate_SOV
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_draft_const }
+		prerequisite = { focus = CML_join_struggle }
+		prerequisite = { focus = CML_KGB }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_united_SOV
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = CML_KGB
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_KGB }
+		mutually_exclusive = { focus = CML_infiltrate_SOV }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_elvish_red_army
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CML_united_SOV
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_united_SOV }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_baltic_pres
+		icon = GFX_goal_generic_propaganda
+		x = -1
+		y = 1
+		relative_position_id = CML_bloodless
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = {
+			focus = CML_bloodless
+			focus = CML_elvish_red_army
+		}
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_scand_pres
+		icon = GFX_goal_generic_propaganda
+		x = 1
+		y = 1
+		relative_position_id = CML_bloodless
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = {
+			focus = CML_bloodless
+			focus = CML_elvish_red_army
+		}
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_poland_pres
+		icon = GFX_goal_generic_propaganda
+		x = 3
+		y = 1
+		relative_position_id = CML_bloodless
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = {
+			focus = CML_bloodless
+			focus = CML_elvish_red_army
+		}
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_war_prep_red
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CML_scand_pres
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = { focus = CML_baltic_pres }
+		prerequisite = { focus = CML_scand_pres }
+		prerequisite = { focus = CML_poland_pres }
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = CML_take_out_hitler
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = CML_war_prep_red
+		cost = 10
+
+		allow_branch = {
+			
+		}
+
+		ai_will_do = {
+			factor = 24
+		}
+
+		available = {
+		
+		}
+		
+		bypass = {
+
+		}
+		
+		prerequisite = {
+			focus = CML_war_prep_red
+		}
+		#mutually_exclusive = { focus = CML_favor_neighbors }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICS }
+
+		completion_reward = {
+		
+		}
+	}
 
 }	
